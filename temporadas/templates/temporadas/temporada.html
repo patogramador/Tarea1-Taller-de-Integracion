@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tarea 1</title>
+</head>
+<body>
+
+  <form action="/temporadas/busqueda" method="get">
+    <input type="text" name="busqueda"/>
+    <button type="submit">Buscar</button>
+  </form>
+
+{% if serie == "BB" %}
+<h1>Breaking Bad</h1>
+{% else %}
+<h1>Better Call Saul</h1>
+{% endif %}
+
+<h2> Temporada {{temporada}} </h2>
+
+<ol>
+  {% for ep in episodios %}
+  {% if serie == "BB" %}
+    <li><a href="/temporadas/episodio/{{ep.id}}/">{{ep.nombre}}</a></li>
+  {% else %}
+    <li><a href="/temporadas/episodio/{{ep.id}}/">{{ep.nombre}}</a></li>
+  {% endif %}
+  {% endfor %}
+</ol>
+
+</body>
+</html>

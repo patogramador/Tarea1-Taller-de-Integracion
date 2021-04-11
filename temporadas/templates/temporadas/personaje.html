@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tarea 1</title>
+</head>
+<body>
+
+  <form action="/temporadas/busqueda" method="get">
+    <input type="text" name="busqueda"/>
+    <button type="submit">Buscar</button>
+  </form>
+
+<h1> {{nombre}} </h1>
+
+<img src={{imagen}} width="400"
+     height="500">
+
+<p> Ocupaciones: </p>
+<ul>
+{% for per in ocupacion %}
+<li> {{per}} </li>
+{% endfor %}
+</ul>
+
+<p> Status: {{status}} </p>
+
+<p> Nickname: {{nick}} </p>
+
+<p> Actor/Actriz: {{actor}}</p>
+
+<p> Temporadas de Breaking Bad donde aparece: </p>
+
+<ul>
+  {% for per in BB %}
+  <li><a href='/temporadas/BB/{{per}}/'> Temporada {{per}} </a></li>
+  {% endfor %}
+</ul>
+
+<p> Temporadas de Better Call Saul donde aparece: </p>
+
+<ul>
+  {% for per in BCS %}
+  <li><a href='/temporadas/BCS/{{per}}/'> Temporada {{per}} </a></li>
+  {% endfor %}
+</ul>
+
+<p> Frases: </p>
+
+<ul>
+  {% for per in quotes %}
+  <li> {{per}} </li>
+  {% endfor %}
+</ul>
+
+
+</body>
+</html>

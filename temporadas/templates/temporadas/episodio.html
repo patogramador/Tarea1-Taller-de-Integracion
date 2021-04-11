@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tarea 1</title>
+</head>
+<body>
+
+  <form action="/temporadas/busqueda" method="get">
+    <input type="text" name="busqueda"/>
+    <button type="submit">Buscar</button>
+  </form>
+
+<h1> {{nombre}} </h1>
+
+<p> Temporada: {{temporada}} </p>
+
+<p> Nº episodio: {{numero}} </p>
+
+<p> Fecha estreno: {{fecha}} </p>
+
+<p> Serie: {{serie}} </p>
+
+<p> Personajes: </p>
+
+<ul>
+  {% for per in personajes %}
+  <li><a href='/temporadas/personaje/{{per}}/'> {{per}} </a></li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>

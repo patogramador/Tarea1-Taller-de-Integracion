@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tarea 1</title>
+</head>
+<body>
+
+<form action="/temporadas/busqueda" method="get">
+  <input type="text" name="busqueda"/>
+  <button type="submit">Buscar</button>
+</form>
+
+<h1>Breaking Bad</h1>
+
+<ul>
+  {% for temp in BB %}
+  <li><a href="/temporadas/BB/{{ temp }}/">Temporada {{temp}}</a></li>
+  {% endfor %}
+</ul>
+
+<h1>Better Call Saul</h1>
+
+<ul>
+  {% for temp in BCS %}
+  <li><a href="/temporadas/BCS/{{ temp }}/">Temporada {{temp}}</a></li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>

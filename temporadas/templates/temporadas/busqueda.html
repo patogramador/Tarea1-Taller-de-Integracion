@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tarea 1</title>
+</head>
+<body>
+
+  <form action="/temporadas/busqueda" method="get">
+    <input type="text" name="busqueda"/>
+    <button type="submit">Buscar</button>
+  </form>
+
+<h1> Su Busqueda: {{busqueda}} </h1>
+
+<ul>
+  {% for ch in nombres %}
+  <li><a href='/temporadas/personaje/{{ch}}/'> {{ch}} </a></li>
+  {% endfor %}
+</ul>
+
+
+</body>
+</html>
